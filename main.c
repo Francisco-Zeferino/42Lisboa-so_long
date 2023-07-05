@@ -23,6 +23,5 @@ int	main(void)
 	map->num_exit = 0;
 
 	fd = open("maps/map1.ber", O_RDONLY);
-	 = 
 	check_map();
 }
