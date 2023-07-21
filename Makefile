@@ -1,12 +1,14 @@
-SRC = main.c map_checker.c error_handling.c list_utils.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+SRC = src/main.c src/map_checker.c src/error_handling.c src/store_map.c src/flood_fill.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c Libft/ft_split.c Libft/ft_strrchr.c Libft/ft_strncmp.c Libft/ft_calloc.c
 
 NAME = so_long
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 
 OBJ :=$(SRC:.c=.o)
+
+all : $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib \

@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 14:45:08 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/05 15:53:11 by ffilipe-         ###   ########.fr       */
+/*   Created: 2023/02/28 13:36:37 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/13 13:35:04 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_memcmp(const void *str1, const void *str2, int n)
 {
-	t_map	*map;
-	int fd;
-	
-	map = malloc(sizeof(t_map));
-	map->num_colect = 0;
-	map->num_players = 0;
-	map->num_exit = 0;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-	fd = open("maps/map1.ber", O_RDONLY);
-	check_map();
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
+	if (n == 0)
+	{
+		return (0);
+	}
+	while ((*s1 == *s2) && n - 1 > 0)
+	{
+		s1++;
+		s2++;
+		n--;
+	}
+	return ((int)(*s1 - *s2));
 }

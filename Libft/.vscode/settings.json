@@ -1,0 +1,15 @@
+{
+    "[c]": {
+            "editor.defaultFormatter": "keyhr.42-c-format",
+			"editor.formatOnSave": true,
+    },
+    "files.associations": {
+        "fcntl.h": "c"
+    },
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "all",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+}

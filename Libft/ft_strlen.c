@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handling.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 15:26:22 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/05 15:26:41 by ffilipe-         ###   ########.fr       */
+/*   Created: 2023/02/27 13:18:43 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/13 13:32:50 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-void	error_msg(void)
+int	ft_strlen(const char *str)
 {
-	write(2, "Error\n", 6);
-	exit(0);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
