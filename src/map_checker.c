@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:57:55 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/21 11:35:32 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/25 11:43:07 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	read_map(t_map *map, char *file_path)
 	char	*line;
 	int		i;
 
-	map = ft_calloc(1, sizeof(t_map));
 	acc = NULL;
 	i = 0;
 	fd = open(file_path, O_RDONLY);
@@ -74,10 +73,4 @@ void	read_map(t_map *map, char *file_path)
 		i++;
 	}
 	map->map_height = i;
-	check_limits(map);
-	store_info(map);
-	if (valid_map_paths(map) == 0)
-		error_msg();
-	free(map->map_arr);
-	free(map);
 }

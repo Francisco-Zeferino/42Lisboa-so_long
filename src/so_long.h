@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 09:58:03 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:10:47 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/25 13:55:43 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ typedef struct map_data
 	int		num_colect;
 	int		num_players;
 	int		num_exit;
+	void	*mlx;
+	void	*mlx_win;
 }			t_map;
 
 int			save_map(char **acc, char *line);
@@ -45,6 +47,8 @@ void		error_msg(void);
 char		*ft_strjoin(char const *s1, char const *s2);
 void		check_ac(int ac);
 int			valid_map_paths(t_map *map);
+void		init_game(t_map *map);
 void		flood_fill(char **map, int x, int y, int *counter);
 void		check_file_path(char *file_path);
 void		error_checks(int ac, char *file_path);
+void		select_img(t_map *map);
