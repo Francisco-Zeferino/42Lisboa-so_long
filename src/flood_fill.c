@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 11:12:13 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/20 15:26:56 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:39:33 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	valid_map_paths(t_map *map)
 	tmp_map = (char **)malloc(sizeof(char *) * (map->map_height + 1));
 	while (map->map_arr[i])
 	{
-		tmp_map[i] = map->map_arr[i];
+		tmp_map[i] = ft_strdup(map->map_arr[i]);
 		i++;
 	}
 	tmp_map[i] = NULL;

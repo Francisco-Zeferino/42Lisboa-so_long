@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 09:52:41 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/21 11:12:20 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 11:02:00 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ int	ft_strlcpy(char *dst, const char *src, int size)
 
 void	*ft_memmove(void *dest, const void *src, int n)
 {
-	unsigned char		*pointer_dest;
-	const unsigned char	*pointer_src;
+	unsigned char *pointer_dest;
+	const unsigned char *pointer_src;
 
 	pointer_dest = (unsigned char *)dest;
 	pointer_src = (const unsigned char *)src;

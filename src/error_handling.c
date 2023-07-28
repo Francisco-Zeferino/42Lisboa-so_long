@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:26:22 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/21 11:35:23 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 16:12:28 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,13 @@ void	check_ac(int ac)
 
 void	check_file_path(char *file_path)
 {
-	if (ft_strncmp(".ber", ft_strrchr(file_path, '.'),
-			ft_strlen(file_path)) != 0)
+	char	*dot;
+
+	dot = ft_strrchr(file_path, '.');
+	if (!dot)
+		error_msg();
+	if (ft_strncmp(".ber", dot,
+			5) != 0)
 		error_msg();
 }
 

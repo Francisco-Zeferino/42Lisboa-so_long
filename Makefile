@@ -1,4 +1,4 @@
-SRC = src/main.c src/map_checker.c src/error_handling.c src/init_mlx.c src/draw_sprites.c src/store_map.c src/flood_fill.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c Libft/ft_split.c Libft/ft_strrchr.c Libft/ft_strncmp.c Libft/ft_calloc.c
+SRC = src/main.c src/map_checker.c src/error_handling.c src/game_hooks.c src/init_mlx.c src/draw_sprites.c src/store_map.c src/flood_fill.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c Libft/ft_split.c Libft/ft_strrchr.c Libft/ft_strncmp.c Libft/ft_calloc.c Libft/ft_strdup.c
 
 NAME = so_long
 

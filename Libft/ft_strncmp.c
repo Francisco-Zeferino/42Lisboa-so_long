@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:10:11 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/13 13:36:24 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 16:09:19 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	if (n == 0)
+	if (n == 0 || !s1 || !s2)
 	{
 		return (0);
 	}

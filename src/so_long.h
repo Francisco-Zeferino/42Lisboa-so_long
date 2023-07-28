@@ -6,13 +6,17 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 09:58:03 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/25 13:55:43 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 15:52:29 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Libft/libft.h"
-#include "../get_next_line/get_next_line.h"
-#include "mlx.h"
+#ifndef SO_LONG_H
+# define SO_LONG_H
+
+# include "../Libft/libft.h"
+# include "../get_next_line/get_next_line.h"
+# include "mlx.h"
+# include "string.h"
 
 typedef struct s_data
 {
@@ -36,6 +40,16 @@ typedef struct map_data
 	int		num_colect;
 	int		num_players;
 	int		num_exit;
+	void	*g_player;
+	void	*g_wall;
+	void	*g_player_up;
+	void	*g_player_left;
+	void	*g_player_down;
+	void	*g_player_right;
+	void	*g_floor;
+	void	*g_collect;
+	void	*g_exit;
+	void	*g_open_exit;
 	void	*mlx;
 	void	*mlx_win;
 }			t_map;
@@ -52,3 +66,7 @@ void		flood_fill(char **map, int x, int y, int *counter);
 void		check_file_path(char *file_path);
 void		error_checks(int ac, char *file_path);
 void		select_img(t_map *map);
+int			key_hook(int keycode, t_map *map);
+void		create_img(t_map *map);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:01:26 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/21 11:33:44 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 12:54:25 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	store_info(t_map *map)
 		}
 		i++;
 	}
-	if (map->num_players > 1 || map->num_exit > 1)
+	if (map->num_players > 1 || map->num_exit > 1 || map->num_players < 1
+		|| map->num_exit < 1)
 		error_msg();
 }

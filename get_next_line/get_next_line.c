@@ -6,7 +6,7 @@
 /*   By: ffilipe- <ffilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:04:58 by ffilipe-          #+#    #+#             */
-/*   Updated: 2023/07/04 11:15:19 by ffilipe-         ###   ########.fr       */
+/*   Updated: 2023/07/28 11:01:36 by ffilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ static char	*next_line(char *line)
 
 char	*get_next_line(int fd)
 {
-	static char	*line;
-	char		*s_next_line;
+	static char *line;
+	char *s_next_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
